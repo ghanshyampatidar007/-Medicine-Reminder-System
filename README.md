@@ -1,12 +1,9 @@
 # Medicine Reminder System
 Purpose :-  Develop a medicine reminder system that ensures users take medicines on time through customizable  schedules and alerts. 
 
-================================================================================ 
-MEDICINE REMINDER SYSTEM USING LPC2148
-
 -------------------------------------------------------------------------------------
-1.PROJECT DESCRIPTION:
-
+1. PROJECT DESCRIPTION :-
+-------------------------------------------------------------------------------------
 This project implements a **Medicine Reminder System** on the **LPC2148 ARM7 
 microcontroller**. It utilizes various embedded peripherals including:
 
@@ -21,8 +18,8 @@ When the RTC time matches the medicine time (within a 2-second window), the
 buzzer sounds to alert the user. The alert continues until SW2 is pressed.
 
 --------------------------------------------------------------------------------------
-2.HARDWARE REQUIREMENTS :-
-
+2. HARDWARE REQUIREMENTS :-
+--------------------------------------------------------------------------------------
 1. LPC2148 Development Board
 2. 16x2 LCD
 3. 4x4 Matrix Keypad
@@ -33,19 +30,20 @@ buzzer sounds to alert the user. The alert continues until SW2 is pressed.
    - SW2: Acknowledge medicine alert
 7. Power Supply
 8. Connecting Wires
------------------------------------------------------------------------------------
-3.PIN CONNECTIONS :-
 
+-------------------------------------------------------------------------------------
+3. PIN CONNECTIONS :-
+-------------------------------------------------------------------------------------
 - LCD: Connected via data lines and control pins (check `lcd.h`)
 - Keypad: Connected to GPIOs (see `keypad_defines.h`)
 - RTC: Uses on-chip RTC features (`rtc.h`)
-- SW1: Connected to P0.5
-- SW2: Connected to P0.6
-- Buzzer: Connected to P1.24
+- SW1: Connected to P0.19
+- SW2: Connected to P0.20
+- Buzzer: Connected to P0.0
 
------------------------------------------------------------------------------------
-4.KEYPAD PIN MAPPING :-
-
+-------------------------------------------------------------------------------------
+4. KEYPAD PIN MAPPING :-
+-------------------------------------------------------------------------------------
 The 4x4 matrix keypad is connected to P0.16 – P0.23 as follows:
 
   ROW0 -> P0.16
@@ -59,10 +57,9 @@ The 4x4 matrix keypad is connected to P0.16 – P0.23 as follows:
 
 See: `keypad_defines.h` for the exact macros.
 
-================================================================================
-SOFTWARE REQUIREMENTS:
-----------------------
-
+--------------------------------------------------------------------------------------
+5 SOFTWARE REQUIREMENTS :-
+--------------------------------------------------------------------------------------
 - Keil uVision (for code development and building)
 - Flash Magic (for programming the LPC2148)
 - Header files used:
@@ -73,40 +70,38 @@ SOFTWARE REQUIREMENTS:
   - MACROS.h (for SETBIT, CLRBIT, etc.)
   - keypad_defines.h (for GPIO pin mappings of keypad)
 
-================================================================================
-HOW TO USE THE PROJECT:
------------------------
-
-1. **Initial Setup:**
+----------------------------------------------------------------------------------------
+6. HOW TO USE THE PROJECT :-
+----------------------------------------------------------------------------------------
+1. Initial Setup :
    - Flash the compiled binary to the LPC2148 using Flash Magic.
    - Power on the board. LCD will show RTC date/time and current medicine time.
 
-2. **Set Modes Using SW1:**
+2. Set Modes Using SW1 :
    - Press SW1 to enter menu:
      - Option 1: Edit RTC
      - Option 2: Update Medicine Time
 
-3. **Edit RTC (Option 1):**
+3. Edit RTC (Option 1):
    - Use keypad to enter:
      - Hour, Minute, Second
      - Day, Date, Month, Year
    - Invalid entries will request re-entry.
 
-4. **Set Medicine Time (Option 2):**
+4. Set Medicine Time (Option 2) :
    - Press SW1 again to enter medicine time set mode.
    - Use keypad to set Hour, Minute, and Second.
    - Press Exit to return to main screen.
 
-5. **Medicine Alert:**
+5. Medicine Alert :
    - When RTC time matches medicine time ±2 seconds:
      - LCD displays an alert
      - Buzzer sounds continuously
    - Press SW2 to stop the alert.
 
-================================================================================
-NOTES:
-------
-
+----------------------------------------------------------------------------------
+7. NOTES :-
+----------------------------------------------------------------------------------
 - Valid time ranges while setting:
   - Hour: 0–23
   - Minute: 0–59
@@ -117,12 +112,10 @@ NOTES:
 - The buzzer toggles periodically while alert is active.
 - Proper debouncing is assumed for SW1 and SW2.
 
-================================================================================
-AUTHORS / CONTRIBUTORS:
------------------------
-
+------------------------------------------------------------------------------------
+8. AUTHORS / CONTRIBUTORS :-
+------------------------------------------------------------------------------------
 This project was implemented using modular code with separate header files for
 each peripheral. Each module (`lcd.c`, `rtc.c`, `keypad.c`, etc.) should be
 compiled along with the main `.c` file.
 
-================================================================================
