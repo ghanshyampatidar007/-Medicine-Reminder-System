@@ -24,7 +24,7 @@ buzzer sounds to alert the user. The alert continues until SW2 is pressed.
 2. 16x2 LCD
 3. 4x4 Matrix Keypad
 4. RTC (DS1307 or on-chip RTC of LPC2148)
-5. Buzzer (connected to P1.24)
+5. Buzzer (connected to P0.0)
 6. Push Button Switches:
    - SW1: Mode selection (RTC edit or Medicine time update)
    - SW2: Acknowledge medicine alert
@@ -67,7 +67,7 @@ See: `keypad_defines.h` for the exact macros.
   - rtc.h
   - keypad.h
   - delay.h
-  - MACROS.h (for SETBIT, CLRBIT, etc.)
+  - defines.h (for SETBIT, CLRBIT, etc.)
   - keypad_defines.h (for GPIO pin mappings of keypad)
 
 ----------------------------------------------------------------------------------------
