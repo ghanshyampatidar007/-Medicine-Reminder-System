@@ -1,12 +1,12 @@
 # Medicine Reminder System
 Purpose :-  Develop a medicine reminder system that ensures users take medicines on time through customizable  schedules and alerts. 
 
-=========================================================================
-             MEDICINE REMINDER SYSTEM USING LPC2148
-=========================================================================
+================================================================================ 
+MEDICINE REMINDER SYSTEM USING LPC2148
 
-PROJECT DESCRIPTION:
---------------------
+-------------------------------------------------------------------------------------
+1.PROJECT DESCRIPTION:
+
 This project implements a **Medicine Reminder System** on the **LPC2148 ARM7 
 microcontroller**. It utilizes various embedded peripherals including:
 
@@ -20,9 +20,8 @@ The system continuously checks the current time against a preset "medicine time.
 When the RTC time matches the medicine time (within a 2-second window), the
 buzzer sounds to alert the user. The alert continues until SW2 is pressed.
 
-================================================================================
-HARDWARE REQUIREMENTS:
-----------------------
+--------------------------------------------------------------------------------------
+2.HARDWARE REQUIREMENTS :-
 
 1. LPC2148 Development Board
 2. 16x2 LCD
@@ -34,10 +33,8 @@ HARDWARE REQUIREMENTS:
    - SW2: Acknowledge medicine alert
 7. Power Supply
 8. Connecting Wires
-
-================================================================================
-PIN CONNECTIONS:
-----------------
+-----------------------------------------------------------------------------------
+3.PIN CONNECTIONS :-
 
 - LCD: Connected via data lines and control pins (check `lcd.h`)
 - Keypad: Connected to GPIOs (see `keypad_defines.h`)
@@ -46,8 +43,9 @@ PIN CONNECTIONS:
 - SW2: Connected to P0.6
 - Buzzer: Connected to P1.24
 
-KEYPAD PIN MAPPING:
--------------------
+-----------------------------------------------------------------------------------
+4.KEYPAD PIN MAPPING :-
+
 The 4x4 matrix keypad is connected to P0.16 – P0.23 as follows:
 
   ROW0 -> P0.16
