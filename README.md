@@ -44,16 +44,16 @@ buzzer sounds to alert the user. The alert continues until SW2 is pressed.
 -------------------------------------------------------------------------------------
 4. KEYPAD PIN MAPPING :-
 -------------------------------------------------------------------------------------
-The 4x4 matrix keypad is connected to P0.16 – P0.23 as follows:
+The 4x4 matrix keypad is connected to P1.16 – P1.23 as follows:
 
-  ROW0 -> P0.16
-  ROW1 -> P0.17
-  ROW2 -> P0.18
-  ROW3 -> P0.19
-  COL0 -> P0.20
-  COL1 -> P0.21
-  COL2 -> P0.22
-  COL3 -> P0.23
+  ROW0 -> P1.16
+  ROW1 -> P1.17
+  ROW2 -> P1.18
+  ROW3 -> P1.19
+  COL0 -> P1.20
+  COL1 -> P1.21
+  COL2 -> P1.22
+  COL3 -> P1.23
 
 See: `keypad_defines.h` for the exact macros.
 
